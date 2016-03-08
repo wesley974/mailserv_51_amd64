@@ -1,0 +1,5 @@
+#!/bin/sh
+(cd /tmp && ftp https://sourceforge.net/projects/awstats/files/AWStats/7.3/awstats-7.3.tar.gz)
+tar zxf /tmp/awstats-7.3.tar.gz -C /usr/local/awstats
+mv /usr/local/awstats/awstats-7.3/* /usr/local/awstats
+rm -rf /usr/local/awstats/awstats-7.3

@@ -1,0 +1,97 @@
+# Logfile created on Mon Sep 24 17:09:25 -0500 2012 by logger.rb/1.2.6
+ActiveScaffold: extending RESTful routes for domains
+ActiveScaffold: extending RESTful routes for users
+ActiveScaffold: extending RESTful routes for forwardings
+ActiveScaffold: extending RESTful routes for greylisted
+ActiveScaffold: extending RESTful routes for whitelist
+ActiveScaffold: extending RESTful routes for greylist
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mAdmin Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAdmin Load (0.4ms)[0m   [0mSELECT `admins`.id FROM `admins` WHERE (`admins`.`username` = BINARY 'adm') LIMIT 1[0m
+  [4;36;1mAdmin Create (0.2ms)[0m   [0;1mINSERT INTO `admins` (`username`, `password`, `created_at`, `email`, `updated_at`) VALUES('adm', 'marauders', '2012-09-24 17:09:42', '', '2012-09-24 17:09:42')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCOMMIT[0m
+ActiveScaffold: extending RESTful routes for domains
+ActiveScaffold: extending RESTful routes for users
+ActiveScaffold: extending RESTful routes for forwardings
+ActiveScaffold: extending RESTful routes for greylisted
+ActiveScaffold: extending RESTful routes for whitelist
+ActiveScaffold: extending RESTful routes for greylist
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (30.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (1)
+Migrating to CreateUpdate (2)
+Migrating to CreateRoutings (3)
+Migrating to CreateBackups (5)
+Migrating to AddQuotaToUser (20081017212743)
+Migrating to CreateAdministrators (20090501064605)
+Migrating to CreateGreylists (20091129101145)
+Migrating to CurlBackup (20100606003705)
+Migrating to CreateSessions (20101111233738)
+Migrating to RemoveOld (20101113220133)
+Migrating to CreateWhitelists (20101127045346)
+Migrating to CreateSystemMigrations (20101216072412)
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW FIELDS FROM `administrators`[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mdescribe `administrators`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `administrators`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `admins`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `admins`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `backups`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `backups`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW KEYS FROM `backups`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mdescribe `domains`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW KEYS FROM `domains`[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSHOW FIELDS FROM `forwardings`[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mdescribe `forwardings`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `forwardings`[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mSHOW FIELDS FROM `greylists`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mdescribe `greylists`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `greylists`[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mSHOW FIELDS FROM `hostconfigs`[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mdescribe `hostconfigs`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSHOW KEYS FROM `hostconfigs`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `licenses`[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mdescribe `licenses`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW KEYS FROM `licenses`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `routings`[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mdescribe `routings`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW KEYS FROM `routings`[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSHOW FIELDS FROM `sessions`[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mdescribe `sessions`[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mSHOW KEYS FROM `sessions`[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mSHOW FIELDS FROM `system_migrations`[0m
+  [4;35;1mSQL (35.4ms)[0m   [0mdescribe `system_migrations`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW KEYS FROM `system_migrations`[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSHOW FIELDS FROM `userpref`[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mdescribe `userpref`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW KEYS FROM `userpref`[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mSHOW FIELDS FROM `whitelists`[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mdescribe `whitelists`[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSHOW KEYS FROM `whitelists`[0m
+ActiveScaffold: extending RESTful routes for domains
+ActiveScaffold: extending RESTful routes for users
+ActiveScaffold: extending RESTful routes for forwardings
+ActiveScaffold: extending RESTful routes for greylisted
+ActiveScaffold: extending RESTful routes for whitelist
+ActiveScaffold: extending RESTful routes for greylist
+ActiveScaffold: extending RESTful routes for domains
+ActiveScaffold: extending RESTful routes for users
+ActiveScaffold: extending RESTful routes for forwardings
+ActiveScaffold: extending RESTful routes for greylisted
+ActiveScaffold: extending RESTful routes for whitelist
+ActiveScaffold: extending RESTful routes for greylist
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mAdmin Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `admins`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAdmin Load (16.9ms)[0m   [0mSELECT `admins`.id FROM `admins` WHERE (`admins`.`username` = BINARY 'test') LIMIT 1[0m
+  [4;36;1mAdmin Create (0.1ms)[0m   [0;1mINSERT INTO `admins` (`email`, `password`, `updated_at`, `created_at`, `username`) VALUES('', 'concept', '2015-05-15 16:01:19', '2015-05-15 16:01:19', 'test')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m

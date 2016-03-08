@@ -1,0 +1,763 @@
+# Logfile created on Mon Sep 24 17:09:15 -0500 2012 by logger.rb/1.2.6
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 5.57.110.90 at 2012-11-15 23:29:30) [GET]
+  Parameters: {"id"=>"tpjut183htvhf2b2tiqoqc8j66", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mUser Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `session`[0m
+  [4;36;1mWebmailSession Load (0.4ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'tpjut183htvhf2b2tiqoqc8j66') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;35;1mDomain Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 193ms (DB: 29) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=tpjut183htvhf2b2tiqoqc8j66]
+
+
+Processing AuthController#unauthorized (for 5.57.110.90 at 2012-11-15 23:29:31) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 138ms (View: 137, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 80.8.214.29 at 2012-12-10 00:42:57) [GET]
+  Parameters: {"id"=>"1308sd2tcdivj4g25ku2ra3o21", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.4ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '1308sd2tcdivj4g25ku2ra3o21') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=1308sd2tcdivj4g25ku2ra3o21]
+
+
+Processing AuthController#unauthorized (for 80.8.214.29 at 2012-12-10 00:42:57) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 21ms (View: 20, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 80.8.214.29 at 2012-12-10 00:43:22) [GET]
+  Parameters: {"id"=>"1308sd2tcdivj4g25ku2ra3o21", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mWebmailSession Load (0.5ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '1308sd2tcdivj4g25ku2ra3o21') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 7ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=1308sd2tcdivj4g25ku2ra3o21]
+
+
+Processing AuthController#unauthorized (for 80.8.214.29 at 2012-12-10 00:43:24) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 88ms (View: 87, DB: 1) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 80.8.214.29 at 2012-12-10 00:45:25) [GET]
+  Parameters: {"id"=>"1308sd2tcdivj4g25ku2ra3o21", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mWebmailSession Load (0.5ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '1308sd2tcdivj4g25ku2ra3o21') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 7ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=1308sd2tcdivj4g25ku2ra3o21]
+
+
+Processing AuthController#unauthorized (for 80.8.214.29 at 2012-12-10 00:45:26) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 17ms (View: 15, DB: 1) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#logout (for 80.8.214.29 at 2012-12-10 00:45:32) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"logout"}
+Redirected to https://ms2.e-solutions.re/webmail/
+Completed in 2ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.47.142 at 2012-12-12 05:13:25) [GET]
+  Parameters: {"id"=>"8lgb549cncbnmcsv7q96tmbhr3", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '8lgb549cncbnmcsv7q96tmbhr3') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'isabelle.begue@oriapa.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2071) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2071)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 17ms (DB: 13) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=8lgb549cncbnmcsv7q96tmbhr3]
+
+
+Processing AuthController#unauthorized (for 93.176.47.142 at 2012-12-12 05:13:25) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2071) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2071)) [0m
+Completed in 47ms (View: 45, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 80.12.213.41 at 2012-12-15 03:24:42) [GET]
+  Parameters: {"id"=>"m9dj6pf4msrd8dtkcntrmrrkq7", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.5ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'm9dj6pf4msrd8dtkcntrmrrkq7') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=4):
+  app/controllers/application_controller.rb:17:in `current_user'
+  app/controllers/auth_controller.rb:5:in `autologin'
+
+
+Rendering /var/mailserv/account/public/404.html (404 Not Found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.101.71 at 2012-12-21 05:44:57) [GET]
+  Parameters: {"id"=>"0vcnl3t0f8ggoklo8ekuitgke3", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mWebmailSession Load (0.6ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = '0vcnl3t0f8ggoklo8ekuitgke3') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'patricia.bouchard@axion.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2115) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2115)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 9ms (DB: 3) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=0vcnl3t0f8ggoklo8ekuitgke3]
+
+
+Processing AuthController#unauthorized (for 193.253.101.71 at 2012-12-21 05:44:57) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2115) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2115)) [0m
+Completed in 46ms (View: 44, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 193.253.101.71 at 2012-12-21 05:47:46) [GET]
+  Parameters: {"id"=>"0vcnl3t0f8ggoklo8ekuitgke3", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mWebmailSession Load (0.5ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = '0vcnl3t0f8ggoklo8ekuitgke3') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'patricia.bouchard@axion.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2115) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2115)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 7ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=0vcnl3t0f8ggoklo8ekuitgke3]
+
+
+Processing AuthController#unauthorized (for 193.253.101.71 at 2012-12-21 05:47:46) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2115) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2115)) [0m
+Completed in 17ms (View: 15, DB: 1) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#logout (for 193.253.101.71 at 2012-12-21 05:47:49) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"logout"}
+Redirected to https://ms2.e-solutions.re/webmail/
+Completed in 2ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/logout]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 90.63.207.90 at 2013-02-05 04:17:59) [GET]
+  Parameters: {"controller"=>"auth", "id"=>"fcq2u2jphiqvuv8dn57oh8rt56", "action"=>"autologin"}
+  [4;35;1mUser Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `session`[0m
+  [4;36;1mWebmailSession Load (0.4ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'fcq2u2jphiqvuv8dn57oh8rt56') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'dimitri@aise.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2160) [0m
+  [4;35;1mDomain Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2160)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 177ms (DB: 31) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=fcq2u2jphiqvuv8dn57oh8rt56]
+
+
+Processing AuthController#unauthorized (for 90.63.207.90 at 2013-02-05 04:18:00) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2160) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2160)) [0m
+Completed in 96ms (View: 95, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 90.43.45.159 at 2013-02-13 02:25:14) [GET]
+  Parameters: {"controller"=>"auth", "id"=>"07803dm45fkuqef2lirti93f53", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '07803dm45fkuqef2lirti93f53') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 17ms (DB: 10) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=07803dm45fkuqef2lirti93f53]
+
+
+Processing AuthController#unauthorized (for 90.43.45.159 at 2013-02-13 02:25:14) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 46ms (View: 44, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 90.43.105.237 at 2013-03-19 00:52:22) [GET]
+  Parameters: {"controller"=>"auth", "id"=>"4cuj5cspnet31krccvpm5s2se6", "action"=>"autologin"}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `session`[0m
+  [4;36;1mWebmailSession Load (0.4ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = '4cuj5cspnet31krccvpm5s2se6') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;35;1mDomain Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 162ms (DB: 29) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=4cuj5cspnet31krccvpm5s2se6]
+
+
+Processing AuthController#unauthorized (for 90.43.105.237 at 2013-03-19 00:52:22) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 74ms (View: 73, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 213.222.69.33 at 2013-03-24 11:00:11) [GET]
+  Parameters: {"controller"=>"auth", "id"=>"ve8ieaffu3c0f2up4ockgh9ei2", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 've8ieaffu3c0f2up4ockgh9ei2') LIMIT 1[0m
+  [4;36;1mUser Load (3.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 13ms (DB: 5) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=ve8ieaffu3c0f2up4ockgh9ei2]
+
+
+Processing AuthController#unauthorized (for 213.222.69.33 at 2013-03-24 11:00:11) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 51ms (View: 49, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.109.52 at 2013-05-30 00:23:44) [GET]
+  Parameters: {"controller"=>"auth", "id"=>"1kup5ksnf771cspc2brfg77go5", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '1kup5ksnf771cspc2brfg77go5') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'w.storap@shock.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2086) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2086)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=1kup5ksnf771cspc2brfg77go5]
+
+
+Processing AuthController#unauthorized (for 193.253.109.52 at 2013-05-30 00:23:44) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2086) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2086)) [0m
+Completed in 112ms (View: 110, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;36;1mSQL (11.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.47.142 at 2013-07-26 06:45:55) [GET]
+  Parameters: {"id"=>"1pmdgo8ujvg346h0s542h1b0i6", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mUser Columns (12.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `session`[0m
+  [4;36;1mWebmailSession Load (11.7ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = '1pmdgo8ujvg346h0s542h1b0i6') LIMIT 1[0m
+  [4;35;1mUser Load (16.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'comptabilite@oriapa.re') LIMIT 1[0m
+  [4;36;1mUser Load (8.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2069) [0m
+  [4;35;1mDomain Columns (15.2ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2069)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 523ms (DB: 86) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=1pmdgo8ujvg346h0s542h1b0i6]
+
+
+Processing AuthController#unauthorized (for 93.176.47.142 at 2013-07-26 06:45:56) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2069) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2069)) [0m
+Completed in 129ms (View: 127, DB: 66) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#logout (for 93.176.47.142 at 2013-07-26 06:46:01) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"logout"}
+Redirected to https://ms2.e-solutions.re/webmail/
+Completed in 2ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 80.8.174.48 at 2013-07-31 07:53:33) [GET]
+  Parameters: {"id"=>"89ofijej52h10figl9me9n0383", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '89ofijej52h10figl9me9n0383') LIMIT 1[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'secretariat@levavasseur.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2051) [0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2051)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 19ms (DB: 14) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=89ofijej52h10figl9me9n0383]
+
+
+Processing AuthController#unauthorized (for 80.8.174.48 at 2013-07-31 07:53:34) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2051) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2051)) [0m
+Completed in 45ms (View: 44, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 80.8.177.133 at 2013-08-07 02:25:26) [GET]
+  Parameters: {"id"=>"es5ua19d98g73hfqi00l7ttlu0", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'es5ua19d98g73hfqi00l7ttlu0') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'secretariat@levavasseur.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2051) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2051)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 14ms (DB: 6) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=es5ua19d98g73hfqi00l7ttlu0]
+
+
+Processing AuthController#unauthorized (for 80.8.177.133 at 2013-08-07 02:25:27) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2051) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2051)) [0m
+Completed in 85ms (View: 84, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.101.71 at 2013-08-12 00:49:32) [GET]
+  Parameters: {"id"=>"0gptgqnf589om976i9n51rrj73", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.5ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '0gptgqnf589om976i9n51rrj73') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'jeanmarie.nangy@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2031) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2031)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=0gptgqnf589om976i9n51rrj73]
+
+
+Processing AuthController#unauthorized (for 193.253.101.71 at 2013-08-12 00:49:32) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2031) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2031)) [0m
+Completed in 45ms (View: 44, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.47.142 at 2013-09-05 01:51:44) [GET]
+  Parameters: {"id"=>"sdirtgs0c27lu6o5hvnb96lkd6", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'sdirtgs0c27lu6o5hvnb96lkd6') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'clarisse.ilaha@oriapa.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2073) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2073)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 9ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=sdirtgs0c27lu6o5hvnb96lkd6]
+
+
+Processing AuthController#unauthorized (for 93.176.47.142 at 2013-09-05 01:51:44) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2073) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2073)) [0m
+Completed in 53ms (View: 51, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 80.8.150.127 at 2013-09-05 07:53:31) [GET]
+  Parameters: {"id"=>"fhiv5748kufleif1kdd4ik80v7", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'fhiv5748kufleif1kdd4ik80v7') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'edouard.bonnet@axion.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=fhiv5748kufleif1kdd4ik80v7]
+
+
+Processing AuthController#unauthorized (for 80.8.150.127 at 2013-09-05 07:53:31) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2037) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2037)) [0m
+Completed in 24ms (View: 22, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.47.142 at 2013-09-09 06:29:16) [GET]
+  Parameters: {"id"=>"bircj52ln5n5tu7jaulh3tmfp7", "controller"=>"auth", "action"=>"autologin"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'bircj52ln5n5tu7jaulh3tmfp7') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'stephanie.agon@oriapa.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2070) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2070)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 9ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=bircj52ln5n5tu7jaulh3tmfp7]
+
+
+Processing AuthController#unauthorized (for 93.176.47.142 at 2013-09-09 06:29:17) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2070) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2070)) [0m
+Completed in 61ms (View: 59, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 193.253.109.52 at 2013-09-09 13:24:16) [GET]
+  Parameters: {"id"=>"b0bl6ks37f25495u5m1d2eq1s4", "controller"=>"auth", "action"=>"autologin"}
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'b0bl6ks37f25495u5m1d2eq1s4') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'w.storap@shock.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2086) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2086)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=b0bl6ks37f25495u5m1d2eq1s4]
+
+
+Processing AuthController#unauthorized (for 193.253.109.52 at 2013-09-09 13:24:17) [GET]
+  Parameters: {"controller"=>"auth", "action"=>"unauthorized"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2086) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2086)) [0m
+Completed in 49ms (View: 47, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.101.71 at 2014-03-03 04:38:36) [GET]
+  Parameters: {"action"=>"autologin", "id"=>"bti0eu5tc4vji24lrmca2cp9l6", "controller"=>"auth"}
+  [4;35;1mUser Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `session`[0m
+  [4;36;1mWebmailSession Load (0.7ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'bti0eu5tc4vji24lrmca2cp9l6') LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'nathalie.buffard@axion.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2020) [0m
+  [4;35;1mDomain Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2020)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 270ms (DB: 12) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=bti0eu5tc4vji24lrmca2cp9l6]
+
+
+Processing AuthController#unauthorized (for 193.253.101.71 at 2014-03-03 04:38:37) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2020) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2020)) [0m
+Completed in 97ms (View: 94, DB: 4) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.100.202 at 2014-03-12 23:20:34) [GET]
+  Parameters: {"action"=>"autologin", "id"=>"t49opfoc58rcsb8fm5cct4rv95", "controller"=>"auth"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (1.4ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 't49opfoc58rcsb8fm5cct4rv95') LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'contact@scpbelot.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2150) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2150)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 22ms (DB: 4) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=t49opfoc58rcsb8fm5cct4rv95]
+
+
+Processing AuthController#unauthorized (for 193.253.100.202 at 2014-03-12 23:20:35) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2150) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2150)) [0m
+Completed in 56ms (View: 53, DB: 5) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#logout (for 193.253.100.202 at 2014-03-12 23:20:40) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"auth"}
+Redirected to https://ms2.e-solutions.re/webmail/
+Completed in 4ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/logout]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.5.157 at 2014-05-09 14:29:08) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"pnsp6qph6kp5764n3o1s0pej43"}
+  [4;35;1mUser Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `session`[0m
+  [4;36;1mWebmailSession Load (0.5ms)[0m   [0;1mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'pnsp6qph6kp5764n3o1s0pej43') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;35;1mDomain Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `domains`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 177ms (DB: 11) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=pnsp6qph6kp5764n3o1s0pej43]
+
+
+Processing AuthController#unauthorized (for 93.176.5.157 at 2014-05-09 14:29:08) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 76ms (View: 74, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.5.157 at 2014-05-20 12:15:12) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"737e6tbuqkgsalv4hfke1tev64"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '737e6tbuqkgsalv4hfke1tev64') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 9ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=737e6tbuqkgsalv4hfke1tev64]
+
+
+Processing AuthController#unauthorized (for 93.176.5.157 at 2014-05-20 12:15:13) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 45ms (View: 43, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 90.62.249.88 at 2014-06-09 10:12:11) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"gjm421v0ilpi56fhfpno92dq52"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.5ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'gjm421v0ilpi56fhfpno92dq52') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 17ms (DB: 9) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=gjm421v0ilpi56fhfpno92dq52]
+
+
+Processing AuthController#unauthorized (for 90.62.249.88 at 2014-06-09 10:12:11) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 137ms (View: 136, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 90.62.249.88 at 2014-06-09 10:31:08) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"9bcm6cpl3n0jaud24nrdgr9ca4"}
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = '9bcm6cpl3n0jaud24nrdgr9ca4') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=9bcm6cpl3n0jaud24nrdgr9ca4]
+
+
+Processing AuthController#unauthorized (for 90.62.249.88 at 2014-06-09 10:31:08) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 18ms (View: 17, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.108.52 at 2014-06-30 04:30:01) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"kn1vsedeuj8fpgchiv4m3hohv2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'kn1vsedeuj8fpgchiv4m3hohv2') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'rrd@e-solutions.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2208) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2208)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 10ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=kn1vsedeuj8fpgchiv4m3hohv2]
+
+
+Processing AuthController#unauthorized (for 193.253.108.52 at 2014-06-30 04:30:02) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2208) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2208)) [0m
+Completed in 47ms (View: 45, DB: 4) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 193.253.108.52 at 2014-06-30 06:10:30) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"kn1vsedeuj8fpgchiv4m3hohv2"}
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'kn1vsedeuj8fpgchiv4m3hohv2') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'rrd@e-solutions.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2208) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2208)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=kn1vsedeuj8fpgchiv4m3hohv2]
+
+
+Processing AuthController#unauthorized (for 193.253.108.52 at 2014-06-30 06:10:31) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2208) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2208)) [0m
+Completed in 30ms (View: 29, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.5.157 at 2014-07-18 13:58:22) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"ibe7ahvpoo46n5vdek9pp7lpv6"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'ibe7ahvpoo46n5vdek9pp7lpv6') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=ibe7ahvpoo46n5vdek9pp7lpv6]
+
+
+Processing AuthController#unauthorized (for 93.176.5.157 at 2014-07-18 13:58:23) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 42ms (View: 41, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.176.5.157 at 2014-11-10 12:09:41) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"pmao8o55h3g8pv6oge2kkp4og1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'pmao8o55h3g8pv6oge2kkp4og1') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 12ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=pmao8o55h3g8pv6oge2kkp4og1]
+
+
+Processing AuthController#unauthorized (for 93.176.5.157 at 2014-11-10 12:09:41) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 36ms (View: 35, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#autologin (for 93.176.5.157 at 2014-11-10 12:13:10) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"pmao8o55h3g8pv6oge2kkp4og1"}
+  [4;35;1mWebmailSession Load (0.5ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'pmao8o55h3g8pv6oge2kkp4og1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=pmao8o55h3g8pv6oge2kkp4og1]
+
+
+Processing AuthController#unauthorized (for 93.176.5.157 at 2014-11-10 12:13:10) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 19ms (View: 18, DB: 1) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 93.14.229.53 at 2014-12-23 09:00:58) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"k8ift4dffr2tb5hchl7kd797b1"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'k8ift4dffr2tb5hchl7kd797b1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'c.bazin@residence-misericorde.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 2) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=k8ift4dffr2tb5hchl7kd797b1]
+
+
+Processing AuthController#unauthorized (for 93.14.229.53 at 2014-12-23 09:00:59) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2165) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2165)) [0m
+Completed in 133ms (View: 132, DB: 2) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.108.52 at 2015-01-05 06:51:18) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"madqcru6d6c6aakr60rvl6doi0"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 'madqcru6d6c6aakr60rvl6doi0') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'wesley@mouedine.net') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2124) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2124)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 8ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=madqcru6d6c6aakr60rvl6doi0]
+
+
+Processing AuthController#unauthorized (for 193.253.108.52 at 2015-01-05 06:51:18) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2124) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2124)) [0m
+Completed in 46ms (View: 45, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]
+
+
+Processing AuthController#logout (for 193.253.108.52 at 2015-01-05 06:51:24) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"auth"}
+Redirected to https://ms2.e-solutions.re/webmail/
+Completed in 2ms (DB: 1) | 302 Found [https://ms2.e-solutions.re/account/auth/logout]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthController#autologin (for 193.253.108.52 at 2015-03-23 08:54:11) [GET]
+  Parameters: {"action"=>"autologin", "controller"=>"auth", "id"=>"s74v3p34e2d57lqd3sdn5630h2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mWebmailSession Load (0.6ms)[0m   [0mSELECT * FROM `session` WHERE (`session`.`sess_id` = 's74v3p34e2d57lqd3sdn5630h2') LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'course@aise.re') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2232) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2232)) [0m
+Redirected to https://ms2.e-solutions.re/account/auth/unauthorized
+Completed in 9ms (DB: 3) | 302 Found [https://ms2.e-solutions.re/account/auth/autologin?id=s74v3p34e2d57lqd3sdn5630h2]
+
+
+Processing AuthController#unauthorized (for 193.253.108.52 at 2015-03-23 08:54:12) [GET]
+  Parameters: {"action"=>"unauthorized", "controller"=>"auth"}
+Rendering template within layouts/application
+Rendering auth/unauthorized
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2232) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `domains` INNER JOIN `administrators` ON `domains`.id = `administrators`.domain_id WHERE ((`administrators`.user_id = 2232)) [0m
+Completed in 51ms (View: 49, DB: 3) | 200 OK [https://ms2.e-solutions.re/account/auth/unauthorized]

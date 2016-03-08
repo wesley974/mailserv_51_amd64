@@ -1,0 +1,118 @@
+#!/bin/sh
+
+START_DIR="/var/mailserv/mail/"
+END_DIR="/.Spam/cur"
+EXT="*2,"
+PF_TABLE="badsrv"
+PF_FILE="/etc/badsrv"
+MXFILE="/etc/mx"
+RDFILE="/tmp/spam00-$(echo $RANDOM)"
+
+usage() {
+echo "!!! ${@}"
+echo "Usage: ${0##*/} name@domain.ext" >&2
+exit 1
+}
+
+question() {
+DET=0
+echo "$i = $SCAN"
+while read MX ; do
+echo $SCAN | grep "$MX$" > /dev/null 2>&1
+if [ "$?" == 0 ]; then
+echo "--find domain $MX! next!"
+DET=1
+fi 
+done < $MXFILE 
+if [ $DET == 0 ]; then
+echo "Ban this IP ? \c"
+read WHAT < /dev/tty
+if [ "$WHAT" == "q" ]; then
+exit 1
+fi
+if [ "$WHAT" != "y" ] && [ "$WHAT" != "n" ]; then
+echo "Please, answer by 'y'(for yes) or 'n'(for no) and 'q' to quit"
+question
+fi
+if [ "$WHAT" == "y" ]; then
+grep $i $PF_FILE > /dev/null 2>&1
+if [ "$?" == 1 ]; then
+echo $i >> $PF_FILE
+/sbin/pfctl -t $PF_TABLE -T add $i
+else
+echo "Already added"
+fi
+fi
+fi
+}
+
+clearfile() {
+rm -f /tmp/spam00-* 2> /dev/null
+}
+
+/sbin/pfctl -s Tables | grep "$PF_TABLE" > /dev/null 2>&1
+if [ "$?" != 0 ]; then
+usage "Table $PF_TABLE doesn't exist"
+fi
+
+if [ ! -f "$PF_FILE" ]; then
+usage "File $PF_FILE doesn't exist"
+fi
+
+if [ "$#" -gt "1" ];then
+usage "Too arguments"
+fi 
+
+if [ "$#" == 0 ]; then
+usage "Need a minimum"
+fi
+
+NB=$(/sbin/pfctl -t $PF_TABLE -Tshow | wc -l)
+DIR=$START_DIR$(echo $1 | awk -F "@" '{print $2}')"/"$(echo $1 |awk -F "@" '{print $1}')$END_DIR
+
+if [ -d "$DIR" ]; then
+echo "The working directory : \c"$DIR"\n\n"
+else
+usage "The folder $DIR doesn't exist!"
+fi
+
+cd $DIR && ls $EXT > /dev/null 2>&1
+if [ "$?" == 1 ]; then
+usage "no spams!"
+fi
+
+echo "Before, Bad IPs : $NB\n"
+
+clearfile
+touch $RDFILE
+touch $RDFILE.list
+
+for f in $DIR/*.$EXT ; do
+grep "^Received: from" $f| perl -lne 'print $& if /(\d+\.){3}\d+/' | xargs -I IP echo IP >> $RDFILE 
+done
+
+cat $RDFILE | sort | uniq > $RDFILE.list
+echo "Total IP found : "$(cat $RDFILE.list | wc -l)
+
+while read i; do
+SCAN=$(nslookup -query=a $i | \
+	grep -v canonical | grep name | awk '{print $4}')
+
+if [ -z "$SCAN" ]; then
+SCAN="unknown."
+echo "-- $SCAN!" 
+fi 
+
+if [ "$SCAN" != "localhost." ] && [ "$SCAN" != "unknown." ]; then
+question
+fi
+
+done < $RDFILE.list
+
+rm -f $RDFILE*
+cd "$DIR" && ls $EXT | xargs -I file rm -f $DIR/file 
+if [ "$?" == 0 ]; then
+echo "Spam messages was removed"
+fi
+echo "Now, Bad IPs : $(/sbin/pfctl -t $PF_TABLE -Tshow | wc -l)\n"
+exit 0
