@@ -1,7 +1,12 @@
 #!/bin/sh
 
-echo "This only works for OpenBSD 5.1 amd64!"
-sleep 5
+echo "This only works with OpenBSD 5.1 amd64!"
+echo "Type 'yes' to continue please : \c"
+read ans
+
+if [ "$ans" != "yes" ]; then
+	exit 0;
+fi
 
 for file in `ls /var/mailserv/install/scripts/*`; do
   echo $file
@@ -12,19 +17,13 @@ done
 
 /var/mailserv/scripts/mailserv_boot.sh
 
-echo "All components added."
-
 echo "Update Highline"
 gem install highline -v=1.6.15
 
-echo "Update PF"
-touch /etc/badsrv
+echo "Load PF ruleset"
 /sbin/pfctl -f /etc/pf.conf
 
 rake -s -f /var/mailserv/admin/Rakefile  mailserv:add_admin
 
-echo ""
-echo "Installation complete."
-echo ""
-echo "Please browse to port 4200 to continue setting up Mailserv."
-echo ""
+echo "\nInstallation complete."
+echo "Please browse to port 4200 to continue setting up Mailserv.\n"
